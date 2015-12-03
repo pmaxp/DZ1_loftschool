@@ -1,0 +1,104 @@
+
+.info_pole{
+    padding-top: 13px;
+    background-color: #eff3f7; 
+	margin-bottom: 26px;
+    padding-bottom: 35px;
+    border-radius: 5px;
+}
+.abzac1{
+    margin-bottom: 8px;
+    list-style-type: none;
+}
+.spisok{
+    color: #4a545d;
+    padding:0;
+    margin:0; 
+    width: 400px;
+    float: right;
+}
+.zaglv{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.657em;
+    color: #3ba8c0;
+    padding: 0 22px 12px 22px;
+    border-bottom: 2px solid #3ba8c0;
+    margin: 0 0 20px 0;
+}
+.kartochka{
+    margin-right: 0;
+    display: inline-block;
+}
+.foto{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    float: left;
+    border: 4px solid #3ba8c0;
+    margin: 14px 22px 12px 55px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;    
+}
+.naviki{
+    padding-left: 0;
+    width: 220px;
+    display: inline-block;
+}
+.name_str{
+    margin-right: 30px;
+    float: left;
+}
+.navik{
+    display: inline-block;
+    background: linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
+    font-size: .8em;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-right: 6px;
+    padding: 0 12px 0 12px;     
+}
+.icon_tx{
+    display: inline-;
+    float: left;
+    margin:7px 28px 0 55px;
+}
+.goda{
+    margin:0;
+    padding:0;
+    font-size: .9em;
+}
+.sprite-kurs_icon{
+    width: 42px;
+    height: 32px;
+    background-position: -134px -4px;
+}
+.sprite-stud_icon{
+    width: 42px;
+    height: 23px;
+    background-position: -114px -108px;
+}
+.sprite-work_icon{
+    width: 42px;
+    height: 34px;
+    background-position: -1px -169px;
+}
+.Stroka{    
+    margin-bottom: 10px;
+}
+.obertka{    
+    color: #4a545d;
+    padding-left: 125px;
+}
+.org-prof{
+    margin:0;
+    padding:0;
+    font-size: 1.05em;
+}

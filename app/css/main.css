@@ -1,0 +1,268 @@
+/*общее*/
+html,body{
+	height: 100%;
+}
+body{
+	background: url(../images/comppattern.png) #fbfcfd;
+}
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	font-family: fira_sansregular, sanserif, arial, helvetica;
+}
+.clearfix:before,
+.clearfix:after{
+    content: " ";    
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.pull_left{
+    float: left!important;  
+}
+.pull_right{
+    float: right!important; 
+}
+.page {
+	position: relative;
+    min-height: 100%;
+    padding-bottom: 81px;
+}
+.linia1
+ 	{height: 3px;
+ 	min-width: 100%;
+ 	background: #1d667a;
+ 	background: linear-gradient(to left, #f2f6fa 0%, #1c667a 50%, #f2f6fa 100%);
+ }
+ .header,.footer
+{   width: 100%;
+    min-width: 970px;
+	background: #eff3f7;
+}
+.header-r,.footer-r {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sprite{
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+/*хедер*/
+ .header{
+    display: table;
+	min-height: 116px;
+   }
+ .logo{
+	margin-top: 39px;
+	float: left;    
+}
+.social_buts{
+    margin-top: 35px;
+	float: right;
+}
+.social_but{
+	margin-left: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.social_but:first-child{
+    margin-left:0px;
+}
+.sprite-facebook{
+    width: 47px;
+    height: 47px;
+    background-position: -32px -4px;
+}
+.sprite-facebook:hover{
+    width: 47px;
+    height: 47px;
+    background-position: -87px -4px;
+}
+.sprite-gihtub{
+    width: 47px;
+    height: 47px;
+    background-position: -4px -59px;
+}
+.sprite-gihtub:hover{
+    width: 47px;
+    height: 47px;
+    background-position: -59px -59px;
+}
+.sprite-tw{
+    width: 47px;
+    height: 47px;
+    background-position: -176px -4px;
+}
+.sprite-tw:hover{
+    width: 47px;
+    height: 47px;
+    background-position: -171px -59px;
+}
+.sprite-vk{
+    width: 47px;
+    height: 47px;
+    background-position: -31px -114px;
+}
+.sprite-vk:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -164px -114px;
+}
+.marg40{
+    margin-bottom: 40px;
+}
+/*контент*/
+.content{
+	width: 960px;
+	margin: 0 auto;
+}
+.sidebar{
+	width: 250px;
+	float: left;
+}
+/*меню*/
+.meny,.contact{
+	list-style-type: none;
+	text-decoration: none;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    border-radius: 4px;
+    background: #eff3f7;
+    margin-bottom: 27px;
+}
+.meny_bt{
+	text-decoration: none;
+    font-size: 1.3em;
+    padding: 19px 0 19px 17px;
+    margin:0 11px;
+    display: block;
+    color: #959aa8; 
+    border-top: 2px solid #3ba8c0; 
+}
+.meny_l:first-child .meny_bt{
+    border-top: 0;
+}
+.meny_bt:hover{
+    color: #3ba8c0;
+}
+.current:hover{
+    color: #fff;
+    background-color: #41b9d4;
+}
+.current{
+    margin:0;
+    background: #3ba8c0;
+    font-size: 22px;
+    color: #fff;
+    border-bottom: none;
+    padding-left: 28px;
+    margin-bottom: -2px;
+}
+/*контакты*/
+.contact_bt, .contact_{
+	text-decoration: none;
+	display: block;
+    color: #fff;
+    background-color: #3ba8c0;          
+}
+.ico_con{
+    float: left;
+    margin: 9px 7px 0 21px;
+    display: inline-block;
+}
+ .c_name{
+    font-size: 1.3em;
+    padding: 7px 20px 3px 20px;
+}
+.sprite-mail_icon{
+    width: 21px;
+    height: 21px;
+    background-position: -142px -42px;
+}
+.sprite-tel_icon{
+    width: 21px;
+    height: 21px;
+    background-position: -3px -139px;
+}
+.sprite-skype_icon{
+    width: 21px;
+    height: 21px;
+    background-position: -142px -68px;
+}
+.text_contact{
+    width: 182px;
+    display: inline-block;
+    margin: 7px;
+    color: #fff;
+    text-decoration: inherit;
+}
+.contact_bt:hover{
+    text-decoration: underline;
+}
+.c_mail{
+background-color: #41b9d4;  
+}
+.c_tel{
+background-color: #48cbe8;  
+}
+.c_skype{
+background-color: #51daf8;  
+}
+ /*футер*/
+
+ .footer{
+	width: 100%;
+	bottom: 0;
+	height: 81px;
+	position: absolute;
+}
+.copyright{
+	font-size: 13px;
+	color: #4a545d;
+	margin-top: 32px;
+	text-align: center;
+	padding-right: 171px;	
+}
+.sprite-sing_up{
+	width: 20px;
+    height: 32px;
+    background-position: -114px -68px;
+}
+.sing-up {
+	color: #4a545d;
+	text-decoration: none;
+	display: inline-block;
+	float: left;
+    padding-top: 8px;
+    padding-left: 28px;
+	margin-left: 151px;
+	margin-top: -9px;
+}
+.sing-up:hover {
+    width: 20px;
+    height: 32px;
+    background-position: -64px -169px;
+    text-decoration: underline;
+}
+.info{
+	width: 650px;
+	float: right;
+    border-radius: 4px;
+    overflow: hidden;   
+}
+.vvod_text{
+	width: 378px;
+	padding: 18px 22px;
+	border: 1px solid #67dffa;
+	border-radius: 5px;
+	color: #67dffa;
+	margin-bottom: 12px;
+}
