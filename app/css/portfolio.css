@@ -1,0 +1,130 @@
+.portfolio{
+    padding: 0 7px;
+}
+.works_elems{
+    vertical-align: top;
+    margin: 8px 14px 5px 14px;
+    display: inline-block;
+    width: 180px
+}
+.works_elem{
+     width: 180px;
+     position: absolute;
+     height: 129px;
+}
+.info_pole{
+    padding-top: 13px;
+    background-color: #eff3f7; 
+	margin-bottom: 26px;
+    padding-bottom: 35px;
+    border-radius: 5px;
+}
+.hover_div{
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    width: 183px;
+    height: 129px;
+    display: inline-block;
+    vertical-align:middle;
+    background-color: #016ca4;
+    border: 2px solid #67dffa;
+    border-radius: 5px;
+    background: rgba(1,108,164,0.0);
+    text-align: center;
+    font-size: .1em; 
+}
+.tran_works{
+ transition: .5s
+}
+.helper{
+    display:-moz-inline-box;
+    display:inline-block;
+    vertical-align:middle;
+    height:100%;
+    width:0px;
+    zoom:1;
+    //display:inline;
+}
+.name_hover{    
+    display: inline-block;
+    vertical-align:middle;
+    padding:0 10px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+.works_elem:hover .hover_div{
+    background: rgba(1,108,164,0.7);
+    font-size: 1em;
+    display: block;
+    visibility: visible;
+
+}
+.works{
+    padding: 0 auto;
+    width: 183px;
+    height: 129px;
+    background-color: #016ca4;
+    border: 2px  solid #67dffa;
+    border-radius: 5px;
+}
+.web_name{
+	margin-bottom: 10px;
+    text-align: center;
+    font-size: .8em;
+    color: #67dffa;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: -3px;
+}
+.web_opisanie{
+    color:#4a545d;
+	margin-top: 0px;
+    font-size: 1em;
+    line-height: 19px;
+    height: 37px;
+    overflow: hidden;
+    margin-bottom: 26px;    
+}
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+.zaglv_portf{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.69em;
+    color: #3ba8c0;
+    padding: 0 24px 12px 24px;
+    border-bottom: 2px solid #3ba8c0;
+    margin: 0 0 3px 0;
+}
+.add_project{
+    color:#3ba8c0;
+    text-decoration: none;
+    padding-top: 0;
+    margin-top: 0;
+    position: absolute;
+    width: 183px;
+    height: 129px;
+    border: 2px dotted #67dffa;
+    border-radius: 5px;
+}
+.add_project:hover{
+    text-decoration: underline;
+}
+.add_proj_img{
+    margin: 33px auto 0 auto;
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-position: -171px -167px;
+}
+.add_proj{
+    font-size: 13px;
+    margin-top: 8px;
+    text-align: center;    
+}
+    
