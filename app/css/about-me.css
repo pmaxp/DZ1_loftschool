@@ -2,8 +2,8 @@
 .info_pole{
     padding-top: 13px;
     background-color: #eff3f7; 
-	margin-bottom: 26px;
-    padding-bottom: 35px;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
     border-radius: 5px;
 }
 .abzac1{
@@ -71,34 +71,44 @@
     margin:7px 28px 0 55px;
 }
 .goda{
-    margin:0;
-    padding:0;
+    margin:0;    
     font-size: .9em;
 }
-.sprite-kurs_icon{
-    width: 42px;
+.kurs_icon:before{
     height: 32px;
     background-position: -134px -4px;
 }
-.sprite-stud_icon{
-    width: 42px;
-    height: 23px;
-    background-position: -114px -108px;
-}
-.sprite-work_icon{
-    width: 42px;
+.work_icon:before{    
     height: 34px;
     background-position: -1px -169px;
 }
-.Stroka{    
-    margin-bottom: 10px;
+.Stroka{
+    list-style-type: none;
+    padding: 0; 
+    margin: 2px 0 0 10px;
 }
-.obertka{    
+.obertka{     
     color: #4a545d;
+    margin-bottom: 11px;
+}
+.padding_ob{
     padding-left: 125px;
 }
+.obertka:before{
+    display: inline-block;
+    content: "";
+    position: absolute;
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    margin: 7px 46px;
+}
+.stud_icon:before{
+    margin: 11px 46px;
+    height: 23px;
+    background-position: -114px -108px;
+}
 .org-prof{
-    margin:0;
-    padding:0;
+    margin:0;    
     font-size: 1.05em;
 }

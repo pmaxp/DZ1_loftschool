@@ -8,6 +8,14 @@
 .vvod_text:-moz-placeholder {vertical-align: text-top;}
 .vvod_text:-ms-input-placeholder {vertical-align: text-top;}
 
+.vvod_text{
+	width: 378px;
+	padding: 18px 22px;
+	border: 1px solid #67dffa;
+	border-radius: 5px;
+	color: #67dffa;
+	margin-bottom: 12px;
+}
 .zaglav_blok_2{
     font-size: 1.69em;
     padding: 41px 0 37px 0;

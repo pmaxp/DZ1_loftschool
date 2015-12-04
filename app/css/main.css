@@ -1,20 +1,20 @@
 /*общее*/
 html,body{
-	height: 100%;
+    height: 100%;
 }
 body{
-	background: url(../images/comppattern.png) #fbfcfd;
+    background: url(../images/comppattern.png) #fbfcfd;
 }
 *{
-	-webkit-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	font-family: fira_sansregular, sanserif, arial, helvetica;
+    font-family: fira_sansregular, sanserif, arial, helvetica;
 }
 .clearfix:before,
 .clearfix:after{
     content: " ";    
-    display: table;
+    display: block;
 }
 .clearfix:after {
     clear: both;
@@ -29,20 +29,30 @@ body{
     float: right!important; 
 }
 .page {
-	position: relative;
+    position: relative;
     min-height: 100%;
     padding-bottom: 81px;
 }
-.linia1
- 	{height: 3px;
- 	min-width: 100%;
- 	background: #1d667a;
- 	background: linear-gradient(to left, #f2f6fa 0%, #1c667a 50%, #f2f6fa 100%);
+.header:after,.footer:before{
+    display: block;
+    content: " "; 
+    height: 3px;
+    min-width: 100%;
+    background: #1d667a;
+    background: linear-gradient(to left, #f2f6fa 0%, #1c667a 50%, #f2f6fa 100%);
+ }
+ .header:after{
+    position: absolute;
+    bottom: 0;
  }
  .header,.footer
-{   width: 100%;
+{   position: relative;
+    width: 100%;
     min-width: 970px;
-	background: #eff3f7;
+    background: #eff3f7;
+}
+.header{
+    margin-bottom: 40px;
 }
 .header-r,.footer-r {
     max-width: 1200px;
@@ -51,86 +61,82 @@ body{
 .sprite{
     background-image: url(../images/spritesheet.png);
     background-repeat: no-repeat;
-    display: inline-block;
+    display: inline-block;    
 }
 /*хедер*/
  .header{
     display: table;
-	min-height: 116px;
+    min-height: 119px;
    }
  .logo{
-	margin-top: 39px;
-	float: left;    
+    margin-top: 39px;
+    float: left;    
 }
 .social_buts{
+    list-style-type: none;
     margin-top: 35px;
-	float: right;
+    float: right;    
+    overflow: hidden;    
 }
 .social_but{
-	margin-left: 20px;
+    display: inline;
+    margin-left: 20px;
     text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: clip;   
 }
 .social_but:first-child{
     margin-left:0px;
 }
 .sprite-facebook{
+    overflow: hidden;    
     width: 47px;
     height: 47px;
     background-position: -32px -4px;
 }
-.sprite-facebook:hover{
-    width: 47px;
-    height: 47px;
+.sprite-facebook:hover{    
     background-position: -87px -4px;
 }
 .sprite-gihtub{
+    overflow: hidden;
     width: 47px;
     height: 47px;
     background-position: -4px -59px;
 }
 .sprite-gihtub:hover{
-    width: 47px;
-    height: 47px;
     background-position: -59px -59px;
 }
 .sprite-tw{
+    overflow: hidden;
     width: 47px;
     height: 47px;
     background-position: -176px -4px;
 }
 .sprite-tw:hover{
-    width: 47px;
-    height: 47px;
     background-position: -171px -59px;
 }
 .sprite-vk{
+    overflow: hidden;
     width: 47px;
     height: 47px;
     background-position: -31px -114px;
 }
-.sprite-vk:hover {
-    width: 47px;
-    height: 47px;
+.sprite-vk:hover{
     background-position: -164px -114px;
-}
-.marg40{
-    margin-bottom: 40px;
 }
 /*контент*/
 .content{
-	width: 960px;
-	margin: 0 auto;
+    width: 960px;
+    margin: 0 auto;
 }
 .sidebar{
-	width: 250px;
-	float: left;
+    width: 250px;
+    float: left;
 }
 /*меню*/
 .meny,.contact{
-	list-style-type: none;
-	text-decoration: none;
+    list-style-type: none;
+    text-decoration: none;
     overflow: hidden;
     margin:0;
     padding:0;
@@ -139,7 +145,7 @@ body{
     margin-bottom: 27px;
 }
 .meny_bt{
-	text-decoration: none;
+    text-decoration: none;
     font-size: 1.3em;
     padding: 19px 0 19px 17px;
     margin:0 11px;
@@ -168,43 +174,38 @@ body{
 }
 /*контакты*/
 .contact_bt, .contact_{
-	text-decoration: none;
-	display: block;
+    text-decoration: none;
+    display: block;
     color: #fff;
     background-color: #3ba8c0;          
 }
-.ico_con{
-    float: left;
-    margin: 9px 7px 0 21px;
+.contact_bt:before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    margin: 10px 14px;
+}
+.text_contact{
     display: inline-block;
+    margin: 7px 2px 7px 50px;
 }
  .c_name{
     font-size: 1.3em;
     padding: 7px 20px 3px 20px;
 }
-.sprite-mail_icon{
-    width: 21px;
-    height: 21px;
+.c_mail:before{
     background-position: -142px -42px;
 }
-.sprite-tel_icon{
-    width: 21px;
-    height: 21px;
+.c_tel:before{   
     background-position: -3px -139px;
 }
-.sprite-skype_icon{
-    width: 21px;
-    height: 21px;
+.c_skype:before{    
     background-position: -142px -68px;
 }
-.text_contact{
-    width: 182px;
-    display: inline-block;
-    margin: 7px;
-    color: #fff;
-    text-decoration: inherit;
-}
-.contact_bt:hover{
+.contact_bt:hover .text_contact{
     text-decoration: underline;
 }
 .c_mail{
@@ -219,32 +220,32 @@ background-color: #51daf8;
  /*футер*/
 
  .footer{
-	width: 100%;
-	bottom: 0;
-	height: 81px;
-	position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 81px;
+    position: absolute;
 }
 .copyright{
-	font-size: 13px;
-	color: #4a545d;
-	margin-top: 32px;
-	text-align: center;
-	padding-right: 171px;	
+    font-size: 13px;
+    color: #4a545d;
+    margin-top: 32px;
+    text-align: center;
+    padding-right: 171px;   
 }
 .sprite-sing_up{
-	width: 20px;
+    width: 20px;
     height: 32px;
     background-position: -114px -68px;
 }
 .sing-up {
-	color: #4a545d;
-	text-decoration: none;
-	display: inline-block;
-	float: left;
+    color: #4a545d;
+    text-decoration: none;
+    display: inline-block;
+    float: left;
     padding-top: 8px;
     padding-left: 28px;
-	margin-left: 151px;
-	margin-top: -9px;
+    margin-left: 151px;
+    margin-top: -9px;
 }
 .sing-up:hover {
     width: 20px;
@@ -253,16 +254,8 @@ background-color: #51daf8;
     text-decoration: underline;
 }
 .info{
-	width: 650px;
-	float: right;
+    width: 650px;
+    float: right;
     border-radius: 4px;
     overflow: hidden;   
-}
-.vvod_text{
-	width: 378px;
-	padding: 18px 22px;
-	border: 1px solid #67dffa;
-	border-radius: 5px;
-	color: #67dffa;
-	margin-bottom: 12px;
 }
