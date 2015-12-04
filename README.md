@@ -1,7 +1,7 @@
 # DZ1_loftschool
 Как установить мой проект
-git clone git.url p_max_p
-cd p_max_p
-bower i
-npm i
-gulp
+1 git clone git.url p_max_p
+2 cd p_max_p
+3 bower i
+4 npm i
+5 gulp
