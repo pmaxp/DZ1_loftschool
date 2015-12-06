@@ -2,7 +2,7 @@
 
 Как установить мой проект
 
-1. git clone git.url p_max_p
+1. git clone https://github.com/pmaxp/DZ1_loftschool.git
 
 2. cd p_max_p
 
