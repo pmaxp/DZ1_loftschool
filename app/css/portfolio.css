@@ -69,27 +69,20 @@
     border-radius: 5px;
 }
 .web_name{
+    display: block;
+    text-decoration: none;
     margin-bottom: 10px;
     text-align: center;
     font-size: .8em;
-    color: #67dffa;
-    font-style: italic;
-    font-weight: lighter;
+    color: #67dffa;    
     margin-top: -3px;
+    font-family: fira_sanslight_italic, sanserif, arial, helvetica;
 }
 .web_opisanie{
+    font-family: fira_sanslight, sanserif, arial, helvetica;
     color:#4a545d;
     margin-top: 0px;
     font-size: 1em;
-    line-height: 19px;
-    height: 37px;
-    overflow: hidden;
-    margin-bottom: 26px;
-}
-.line-clamp{
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
 }
 .zaglv_portf{
     display: inline-block;
@@ -122,6 +115,7 @@
     background-position: -171px -167px;
 }
 .add_proj{
+    font-family: fira_sanslight, sanserif, arial, helvetica;
     font-size: 13px;
     margin-top: 8px;
     text-align: center;

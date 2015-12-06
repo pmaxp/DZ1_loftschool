@@ -2,7 +2,7 @@ var gulp = require("gulp"),
 	browserSync = require('browser-sync');
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('server', function() {
     browserSync({
     	port: 9000,
         server: {
@@ -16,7 +16,7 @@ gulp.task('watch', function() {
     	'app/*.html',
     	'app/js/**/*.js',
     	'app/css/**/*.css'	
-    ]).on('change', browserSync.reload);
-});
+    ]).on('change', browserSync.reload)
+})
 
 gulp.task('default',['server', 'watch']);

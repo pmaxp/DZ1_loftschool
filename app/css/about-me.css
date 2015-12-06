@@ -46,21 +46,22 @@
 }
 .naviki{
     padding-left: 0;
-    width: 220px;
+    width: 214px;
     display: inline-block;
 }
 .name_str{
     margin-right: 30px;
     float: left;
+    font-family: fira_sansmedium, sanserif, arial, helvetica;
 }
 .navik{
+    font-family: proxima_nova_condensedSBd, sanserif, arial, helvetica;
     display: inline-block;
     background: linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
-    font-size: .8em;
+    font-size: 14px;
     border-radius: 3px;
-    color: #fff;
-    font-weight: 600;
+    color: #fff;    
     margin-top: 8px;
     margin-right: 6px;
     padding: 0 12px 0 12px;     
@@ -73,6 +74,7 @@
 .goda{
     margin:0;    
     font-size: .9em;
+    font-family: fira_sanslight, sanserif, arial, helvetica;
 }
 .kurs_icon:before{
     height: 32px;

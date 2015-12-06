@@ -9,6 +9,7 @@
 .vvod_text:-ms-input-placeholder {vertical-align: text-top;}
 
 .vvod_text{
+	font-family: fira_sanslight, sanserif, arial, helvetica;
 	width: 378px;
 	padding: 18px 22px;
 	border: 1px solid #67dffa;

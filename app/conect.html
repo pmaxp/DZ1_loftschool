@@ -15,7 +15,7 @@
 	<!-- bower CSS -->
 	<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">	
 	<!-- fonts -->
-	<link rel="stylesheet" type="text/css" href="fonts/fira.css">
+	<link rel="stylesheet" type="text/css" href="css/fira.css">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
@@ -29,7 +29,7 @@
 	<div class="page">
 			<header class="header">
 				<div class="header-r clearfix">
-					<a class="logo" href="http:\\loftblog.ru"><img src="images/logo.png" alt="LoftBlog.ru"></a>
+					<a class="logo" href="http://loftblog.ru"><img src="images/logo.png" alt="LoftBlog.ru"></a>
 					<ul class="social_buts">
 						<li class="social_but"><a class="sprite sprite-vk" href="http://vk.com/p_max_p">Вконтакте</a></li>
 						<li class="social_but"><a class="sprite sprite-tw" href="#">Twitter</a></li>
@@ -72,25 +72,25 @@
 						<div class="name_mail">
 							<div class="pole_zapolneniy pull_left">
 								<div class="Name_po_z">Имя</div>
-								<input maxlength="35" class="vvod_text soobshenie" placeholder="Как к Вам обращаться"></input>
+								<input maxlength="35" class="vvod_text soobshenie text-input-placeholder_state_active" placeholder="Как к Вам обращаться"></input>
 							</div>
 							<div class="pole_zapolneniy pull_right">
 								<div class="Name_po_z">Email</div>
-								<input maxlength="35" class="vvod_text soobshenie" placeholder="Куда мне писать"></input>
+								<input maxlength="35" class="vvod_text soobshenie text-input-placeholder_state_active" placeholder="Куда мне писать"></input>
 							</div>
 						</div>
 						<div class="pole_zapolneniy sms">
 							<div class="Name_po_z">Сообщение</div>
-							<textarea maxlength="450" class="vvod_text soobshenie soobsen_vvod" placeholder="Кратко в чем суть"></textarea>
+							<textarea maxlength="450" class="vvod_text soobshenie soobsen_vvod text-input-placeholder_state_active" placeholder="Кратко в чем суть"></textarea>
 						</div>
 						<div class="pole_zapolneniy capcha_blok">
 							<div class="Name_po_z">Введите код, указанный на картинке</div>
 							<img class="imgcapch" alt="Capcha" src="images/Capcha_01.jpg">
-							<input maxlength="10" class="vvod_text ckapcha_vvod soobshenie" placeholder="Введите код"></input>							
+							<input maxlength="10" class="vvod_text ckapcha_vvod soobshenie text-input-placeholder_state_active" placeholder="Введите код"></input>							
 						</div>
 						<div class="button_group"></div>
-						<button type="submit" class="bt2" href="#">Отправить</button>
-						<button type="reset" class="pull_right noactiv_bt" href="#">Очистить</button>
+						<button type="submit" class="bt2">Отправить</button>
+						<button type="reset" class="pull_right noactiv_bt">Очистить</button>
 					</article>
 				</section>				
 			</main>
@@ -104,6 +104,7 @@
 			</footer>
 		</div>
 	<script src="bower/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="bower/jquery.placeholder.js/jquery.placeholder.js" type="text/javascript"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
