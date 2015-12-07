@@ -262,3 +262,12 @@ background-color: #51daf8;
     border-radius: 4px;
     overflow: hidden;   
 }
+.helper{
+    display:-moz-inline-box;
+    display:inline-block;
+    vertical-align:middle;
+    height:100%;
+    width:0px;
+    zoom:1;
+    //display:inline;
+}

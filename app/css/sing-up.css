@@ -8,34 +8,18 @@
 	border-bottom: 14px solid #67dffa;
 	margin-bottom: 18px;
 }
-.helper_2{
-    height: 1px;
-    margin-bottom: 5%;
-}
-.close{
-	border-radius: 6px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 35px;
-	position: absolute;	
-	text-align: center;
-	background-color: #48cbe8;
-	display: inline-block;	
-	margin-right: -100px;
-	height: 50px;
-	width: 50px;
-	
-	margin: 0;
-}
 .conect_name{
 	margin:0 0 3px 0;
 	font-size: 2.16em;
 	font-weight: 100;
 	color: #959aa8;
 }
-.conteiner_contact{
-	width: 700px;
-	margin: 0 auto;
+.conteiner_contact{	
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -286px 0px 0 -295px;
+    z-index: 10;
 }
 .conect{
 	padding: 0;

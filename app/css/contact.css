@@ -98,8 +98,14 @@
     background-color: #48cbe8;
     border-radius: 5px;
 }
+.bt2:hover{
+	border-bottom: none;
+}
+.bt2:active{
+	border-top: solid 4px #3ba8c0;
+}
 .noactiv_bt{
-	cursor: default;
+	/*cursor: default;*/
 	color: #fff;
 	height: 33px;
 	font-size: 20px;
@@ -109,9 +115,9 @@
 	border-radius: 5px;
 	padding: 0px 20px 0 20px;
 }
-.bt2:hover{
+.noactiv_bt:hover{
 	border-bottom: none;
 }
-.bt2:active{
-	border-top: solid 4px #3ba8c0;
+.noactiv_bt:active{
+	border-top: solid 4px #687b8f;
 }

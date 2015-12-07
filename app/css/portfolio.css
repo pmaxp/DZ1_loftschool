@@ -31,16 +31,7 @@
     border-radius: 5px;    
     text-align: center;
     font-size: 0em;
-    background: url(../images/fon_portfplio_0.png); 
-}
-.helper{
-    display:-moz-inline-box;
-    display:inline-block;
-    vertical-align:middle;
-    height:100%;
-    width:0px;
-    zoom:1;
-    //display:inline;
+    background: url(../images/fon_portfplio_0.png);     
 }
 .name_hover{    
     display: inline-block;    
