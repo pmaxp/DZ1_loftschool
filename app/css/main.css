@@ -30,8 +30,7 @@ body{
 }
 .page {
     position: relative;
-    height: 100%;
-    padding-bottom: 81px;
+    min-height: 100%;    
 }
 .header:after,.footer:before{
     display: block;
@@ -69,6 +68,7 @@ body{
     min-height: 119px;
    }
  .logo{
+    overflow: hidden;
     margin-top: 39px;
     float: left;
     height: 42px;
@@ -128,6 +128,7 @@ body{
 }
 /*контент*/
 .content{
+    padding-bottom: 81px;
     width: 960px;
     margin: 0 auto;
 }
@@ -222,10 +223,10 @@ background-color: #51daf8;
  /*футер*/
 
  .footer{
+    position: absolute;
     width: 100%;
     bottom: 0;
     height: 81px;
-    position: absolute;
 }
 .copyright{
     font-family: fira_sanslight, sanserif, arial, helvetica;

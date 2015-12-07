@@ -29,12 +29,12 @@
 	<div class="page">
 			<header class="header">
 				<div class="header-r clearfix">
-					<a class="logo" href="http://loftblog.ru"><img src="images/logo.png" alt="LoftBlog.ru"></a>
+					<a class="logo" href="http://p-max-p.ru/"><img src="images/logo.png" alt="p-max-p.ru"></a>
 					<ul class="social_buts">
-						<li class="social_but"><a class="sprite sprite-vk" href="http://vk.com/p_max_p">Вконтакте</a></li>
-						<li class="social_but"><a class="sprite sprite-tw" href="#">Twitter</a></li>
-						<li class="social_but"><a class="sprite sprite-facebook" href="#">Facebook</a></li>
-						<li class="social_but"><a class="sprite sprite-gihtub" href="https://github.com/pmaxp">Gihtub</a></li>
+						<li class="social_but"><a target="_blank" class="sprite sprite-vk" href="http://vk.com/p_max_p">Вконтакте</a></li>
+						<li class="social_but"><a target="_blank" class="sprite sprite-tw" href="#">Twitter</a></li>
+						<li class="social_but"><a target="_blank" class="sprite sprite-facebook" href="#">Facebook</a></li>
+						<li class="social_but"><a target="_blank" class="sprite sprite-gihtub" href="https://github.com/pmaxp">Gihtub</a></li>
 					</ul>
 					<div style="clear: both;"></div>
 				</div>
@@ -66,33 +66,33 @@
 						</li>
 					</ul>
 				</nav>
-				<section class="info fon">
+				<form class="info fon">
 					<div class="zaglav_blok_2">У вас интересный проект? Напишите мне</div>
 					<article class="info_space">
 						<div class="name_mail">
 							<div class="pole_zapolneniy pull_left">
 								<div class="Name_po_z">Имя</div>
-								<input maxlength="35" class="vvod_text soobshenie text-input-placeholder_state_active" placeholder="Как к Вам обращаться">
+								<input name="name" type="text" maxlength="35" class="vvod_text soobshenie" placeholder="Как к Вам обращаться">
 							</div>
 							<div class="pole_zapolneniy pull_right">
 								<div class="Name_po_z">Email</div>
-								<input maxlength="35" class="vvod_text soobshenie text-input-placeholder_state_active" placeholder="Куда мне писать">
+								<input name="email" type="text" maxlength="35" class="vvod_text soobshenie" placeholder="Куда мне писать">
 							</div>
 						</div>
 						<div class="pole_zapolneniy sms">
 							<div class="Name_po_z">Сообщение</div>
-							<textarea maxlength="450" class="vvod_text soobshenie soobsen_vvod text-input-placeholder_state_active" placeholder="Кратко в чем суть"></textarea>
+							<textarea name="comment" maxlength="450" class="vvod_text soobshenie soobsen_vvod" placeholder="Кратко в чем суть"></textarea>
 						</div>
 						<div class="pole_zapolneniy capcha_blok">
 							<div class="Name_po_z">Введите код, указанный на картинке</div>
 							<img class="imgcapch" alt="Capcha" src="images/Capcha_01.jpg">
-							<input maxlength="10" class="vvod_text ckapcha_vvod soobshenie text-input-placeholder_state_active" placeholder="Введите код">							
+							<input name="capcha" type="text" maxlength="10" class="vvod_text ckapcha_vvod soobshenie" placeholder="Введите код">							
 						</div>
 						<div class="button_group"></div>
 						<button type="submit" class="bt2">Отправить</button>
 						<button type="reset" class="pull_right noactiv_bt">Очистить</button>
 					</article>
-				</section>				
+				</form>				
 			</main>
 			<div style="clear: both;"></div>
 			<footer class="footer">
