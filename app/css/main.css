@@ -30,7 +30,7 @@ body{
 }
 .page {
     position: relative;
-    min-height: 100%;
+    height: 100%;
     padding-bottom: 81px;
 }
 .header:after,.footer:before{
@@ -183,16 +183,16 @@ body{
 }
 .contact_bt:before{
     content: "";
-    position: absolute;
+    float: left;
     background-image: url(../images/spritesheet.png);
     background-repeat: no-repeat;
     width: 21px;
     height: 21px;
-    margin: 10px 14px;
+    margin: 10px 15px 0 14px;
 }
 .text_contact{
     display: inline-block;
-    margin: 7px 2px 7px 50px;
+    margin: 7px 2px;
 }
  .c_name{
     font-size: 1.3em;
