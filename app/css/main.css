@@ -272,3 +272,6 @@ background-color: #51daf8;
     zoom:1;
     //display:inline;
 }
+.hidded{
+    display: none;
+}

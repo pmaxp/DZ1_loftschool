@@ -117,7 +117,7 @@
 							</li>
 							<li class="works_elems clearfix">
 								<div class="works_elem">
-									<a href="#" class="add_project">
+									<a id="my-button"  class="add_project" href="#">
 										<div class="sprite add_proj_img"></div>
 										<p class="add_proj">Добавить проект</p>
 									</a>
@@ -129,15 +129,42 @@
 			</main>
 			<div style="clear: both;"></div>
 			<footer class="footer">
-			<div class="linia1"></div>
 				<div class="footer-r">
-					<a class="sing-up sprite sprite-sing_up" href="sing_up.html"> Войти</a>
+					<a class="sing-up sprite sprite-sing_up" href="sing_up.html">Войти</a>
 					<p class="copyright">© 2015. Это сайт Попова Максима, пожалуйста, не копируйте и не воруйте его</p>
 				</div>
 			</footer>
 		</div>
-	<script src="bower/jquery/dist/jquery.js" type="text/javascript"></script>
-	<script src="js/placeholder.js" type="text/javascript"></script>	
+	<script src="bower/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="js/placeholder.js" type="text/javascript"></script>
+	<script src="bower/bPopup/jquery.bpopup.min.js" type="text/javascript"></script>
 	<script src="js/main.js" type="text/javascript"></script>
+	<div id="element_to_pop_up" class="popup">
+		<div class="popup__container">
+			<a href="javascript:PopUpHide()" class="button b-close">
+				<span>x</span>
+			</a>
+			<div class="bpopup_zg">Добавление проекта</div>
+			<ul class="bpopup_ul">
+				<li>
+					<div>Название проекта</div>
+					<input id="name_popup" type="text" class="bpopup_input" placeholder="Введите название">
+				</li>
+				<li>
+					<div>Картинка проекта</div>
+					<div class="bpopup_input input_file">Загрузите изображение<label class="ico_popup"><input type="file" class="hide_input"></label></div>
+				</li>
+				<li>
+					<div>URL проекта</div>
+					<input id="url" type="text" class="bpopup_input" placeholder="Добавьте ссылку">
+				</li>
+				<li>
+					<div>Описание</div>
+					<textarea id="description_popup" class="bpopup_input description_popup" placeholder="Пара слов о Вашем проекте"></textarea>
+				</li>
+				<button class="bt2 apopup__btn--send">Добавить</button>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

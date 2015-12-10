@@ -84,6 +84,7 @@
     margin: 0 0 3px 0;
 }
 .add_project{
+    cursor: pointer;
     color:#3ba8c0;
     text-decoration: none;
     padding-top: 0;
@@ -108,5 +109,113 @@
     font-family: fira_sanslight, sanserif, arial, helvetica;
     font-size: 13px;
     margin-top: 8px;
-    text-align: center;
+    text-align: center;    
+}
+.popup{
+    margin-top: 40px;
+    display: none;
+}
+.popup__container{
+    width: 362px;
+    background-color: #eff3f7;    
+    overflow: hidden;
+    border-radius: 5px;    
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+.bpopup_ul{
+    font-size: 17px; 
+    list-style-type: none;
+    padding: 0px 21px;
+    margin: 0;
+    color: #959aa8;
+}
+.b-close{
+    font-family: proxima_nova_condensedSBd, sanserif, arial, helvetica;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    right: 11px;
+    top: 9px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 0px 8px; 
+    font-size: 12px;    
+}
+.bpopup_zg{
+    font-size: 25px;
+    padding: 5px 0 0px 13px;
+    border-bottom: 17px solid #67dffa;    
+    background-color: #48cbe8;
+    color: #fff;
+    border-bottom: 10px solid #67dffa;
+    margin-bottom: 5px;
+}
+.bt2{
+    margin: 0 auto 20px;
+    display: block;
+    height: 33px;
+    color: #fff;
+    font-size: 19px;
+    border: solid #3ba8c0;
+    border-width: 0 0 3px;
+    padding: 0px 28px 0 28px;
+    background-color: #48cbe8;
+    border-radius: 5px;
+}
+.bt2:hover{
+    border-bottom: none;
+}
+.bt2:active{
+    border-top: solid 4px #3ba8c0;
+}
+.bpopup_input{
+    font-size: 13px;
+    font-family: fira_sanslight, sanserif, arial, helvetica;
+    width: 320px;
+    padding: 10px 7px;
+    border: 1px solid #67dffa;
+    border-radius: 5px;
+    color: #67dffa;
+    margin-bottom: 6px;
+}
+.description_popup{
+    height: 112px;    
+    resize: none;
+}
+.input_file{    
+    overflow: hidden;
+    width: 320px;
+    background-color: #fff;    
+}
+.hide_input{
+    z-index: 15;   
+    position: absolute;
+    display: none;    
+    width: 54px;
+    height: 42px;    
+}
+.bpopup_input::-webkit-input-placeholder {color: #48cbe8;}
+.bpopup_input::-moz-placeholder {color: #48cbe8;}
+.bpopup_input:-moz-placeholder {color: #48cbe8;}
+.bpopup_input:-ms-input-placeholder {color: #48cbe8;}
+.ico_popup:after{
+    content: "";
+    background-image: url(../images/spritesheet.png);
+    width: 33px;
+    height: 24px;
+    float: right;
+    margin: 8px 9px 10px 0;
+    display: inline-block;
+    background-position: -120px -140px;
+}
+.ico_popup{
+    cursor: pointer;
+    right: 22px;
+    margin-top: -11px;
+    overflow: hidden;
+    width: 53px;
+    position: absolute;    
+    background-color: #48cbe8;
+    border-radius: 0 5px 5px 0;
 }
