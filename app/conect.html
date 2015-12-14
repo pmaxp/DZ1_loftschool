@@ -13,7 +13,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="max.ico">
 	<link rel="icon" type="image/x-icon" href="max.ico">
 	<!-- bower CSS -->
-	<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="bower/qtip2/jquery.qtip.css">
 	<!-- fonts -->
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<!-- CSS -->
@@ -66,27 +67,27 @@
 						</li>
 					</ul>
 				</nav>
-				<form class="info fon">
+				<form id="send_message_mail" class="info fon">
 					<div class="zaglav_blok_2">У вас интересный проект? Напишите мне</div>
 					<article class="info_space">
 						<div class="name_mail">
 							<div class="pole_zapolneniy pull_left">
 								<div class="Name_po_z">Имя</div>
-								<input name="name" type="text" maxlength="35" class="vvod_text soobshenie" placeholder="Как к Вам обращаться">
+								<input name="name" type="text" maxlength="35" class="vvod_text input" placeholder="Как к Вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left">
 							</div>
 							<div class="pole_zapolneniy pull_right">
 								<div class="Name_po_z">Email</div>
-								<input name="email" type="text" maxlength="35" class="vvod_text soobshenie" placeholder="Куда мне писать">
+								<input name="email" type="text" maxlength="35" class="vvod_text input" placeholder="Куда мне писать" qtip-content="Вы не ввели email" qtip-position="right">
 							</div>
 						</div>
 						<div class="pole_zapolneniy sms">
 							<div class="Name_po_z">Сообщение</div>
-							<textarea name="comment" maxlength="450" class="vvod_text soobshenie soobsen_vvod" placeholder="Кратко в чем суть"></textarea>
+							<textarea name="comment" maxlength="450" class="vvod_text input soobsen_vvod" placeholder="Кратко в чем суть" qtip-content="Что вы хотите от меня" qtip-position="left"></textarea>
 						</div>
 						<div class="pole_zapolneniy capcha_blok">
 							<div class="Name_po_z">Введите код, указанный на картинке</div>
 							<img class="imgcapch" alt="Capcha" src="images/Capcha_01.jpg">
-							<input name="capcha" type="text" maxlength="10" class="vvod_text ckapcha_vvod soobshenie" placeholder="Введите код">							
+							<input name="capcha" type="text" maxlength="10" class="vvod_text ckapcha_vvod input" placeholder="Введите код" qtip-content="Вы не ввели код" qtip-position="right">							
 						</div>
 						<div class="button_group"></div>
 						<button type="submit" class="bt2">Отправить</button>
@@ -103,6 +104,8 @@
 			</footer>
 		</div>
 	<script src="bower/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="bower/qtip2/jquery.qtip.js" type="text/javascript"></script>
+	<script src="js/validation.js" type="text/javascript"></script>
 	<script src="js/placeholder.js" type="text/javascript"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 </body>

@@ -1,7 +1,7 @@
 var gulp = require("gulp"),
 	browserSync = require('browser-sync');
 
-// Static server
+// Загружаем сервер
 gulp.task('server', function() {
     browserSync({
     	port: 9000,
@@ -10,7 +10,7 @@ gulp.task('server', function() {
         }
     });
 });
-
+// Слежка за файлами
 gulp.task('watch', function() {
     gulp.watch([
     	'app/*.html',
@@ -20,3 +20,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default',['server', 'watch']);
+
+// ==========================================
+// =============== Функции ==================
+

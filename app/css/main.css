@@ -275,3 +275,14 @@ background-color: #51daf8;
 .hidded{
     display: none;
 }
+.qtip-mystyle {
+    background-color: #f97e76;
+    border-color: #f97e76;
+    font-family: 'Arial';
+    color: #ffffff;
+    font-size: 13px;
+}
+.has-error {
+    background-color: #fad2d1 !important;
+    border-color: #f97e76 !important;
+}

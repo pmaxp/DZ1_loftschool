@@ -14,6 +14,7 @@
 	<link rel="icon" type="image/x-icon" href="max.ico">
 	<!-- bower CSS -->
 	<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="bower/qtip2/jquery.qtip.css">
 	<!-- fonts -->
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<!-- CSS -->
@@ -77,7 +78,7 @@
 											<span href="#" class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
-										<img class="works" src="images/web_01.jpg" alt="site.ru">			
+										<img class="works" src="images/web_01.jpg" alt="site.ru">	
 								</a>								
 								<a href="#" class="web_name">www.site.ru</a>
 								<p class="web_opisanie">Информация о проекте </p>
@@ -88,7 +89,7 @@
 											<span href="#" class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
-										<img class="works" src="images/web_01.jpg" alt="site.ru">			
+										<img class="works" src="images/web_01.jpg" alt="site.ru">	
 								</a>								
 								<a href="#" class="web_name">www.site.ru</a>
 								<p class="web_opisanie">Информация о проекте 1 превью 2 строки</p>
@@ -99,7 +100,7 @@
 											<span href="#" class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
-										<img class="works" src="images/web_01.jpg" alt="site.ru">			
+										<img class="works" src="images/web_01.jpg" alt="site.ru">	
 								</a>								
 								<a href="#" class="web_name">www.site.ru</a>
 								<p class="web_opisanie">Информация о проекте 1 превью 2 строки еще какой то текст</p>
@@ -110,14 +111,14 @@
 											<span href="#" class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
-										<img class="works" src="images/web_01.jpg" alt="site.ru">			
+										<img class="works" src="images/web_01.jpg" alt="site.ru">	
 								</a>								
 								<a href="#" class="web_name">www.site.ru</a>
 								<p class="web_opisanie">Информация о проекте 1 превью</p>
 							</li>
 							<li class="works_elems clearfix">
 								<div class="works_elem">
-									<a id="my-button"  class="add_project" href="#">
+									<a id="add-button-project"  class="add_project" href="#">
 										<div class="sprite add_proj_img"></div>
 										<p class="add_proj">Добавить проект</p>
 									</a>
@@ -128,6 +129,42 @@
 				</section>
 			</main>
 			<div style="clear: both;"></div>
+			<div id="add-project_pop_up" class="popup">
+				<div class="popup__container">
+					<a href="" class="button b-close">
+						<span>x</span>
+					</a>
+					<div class="bpopup_zg">Добавление проекта</div>
+					<div class="modal-body">						
+						<form id="add-new-project" role="form" class="form">		
+							<ul class="bpopup_ul">
+								<li>
+									<div class="server-mes error-mes"></div>
+									<div class="server-mes success-mes"></div>
+								</li>
+								<li>
+									<div>Название проекта</div>
+									<input name="projectName" type="text" id="name_popup" type="text" class="bpopup_input" placeholder="Введите название" qtip-content="Вы не ввели имя" qtip-position="left">
+								</li>
+								<li>
+									<div>Картинка проекта</div>
+									<input disabled='' placeholder="Загрузите изображение" id="fileupload-text" name="file_project-text" type="text" class="bpopup_input input_file" qtip-content="Вы не выбрали картинку" qtip-position="left"><label class="ico_popup"><input id="fileupload" name="files[]" type="file" class="hide_input">
+									<input id="fileurl" type="hidden" name="fileurl"></label>
+								</li>
+								<li>
+									<div>URL проекта</div>
+									<input name="URL-project" id="url" type="text" class="bpopup_input" placeholder="Добавьте ссылку" qtip-content="Вы не ввели ссылку" qtip-position="left">
+								</li>
+								<li>
+									<div>Описание</div>
+									<textarea name="description-progect" type="text" id="description_popup" class="bpopup_input description_popup" placeholder="Пара слов о Вашем проекте" qtip-content="Вы не ввели описание" qtip-position="left"></textarea>
+								</li>
+								<button type="submit" class="bt2 apopup__btn--send">Добавить</button>
+							</ul>
+						</form>	
+					</div>
+				</div>
+			</div>
 			<footer class="footer">
 				<div class="footer-r">
 					<a class="sing-up sprite sprite-sing_up" href="sing_up.html">Войти</a>
@@ -138,33 +175,8 @@
 	<script src="bower/jquery/jquery.min.js" type="text/javascript"></script>
 	<script src="js/placeholder.js" type="text/javascript"></script>
 	<script src="bower/bPopup/jquery.bpopup.min.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
-	<div id="element_to_pop_up" class="popup">
-		<div class="popup__container">
-			<a href="javascript:PopUpHide()" class="button b-close">
-				<span>x</span>
-			</a>
-			<div class="bpopup_zg">Добавление проекта</div>
-			<ul class="bpopup_ul">
-				<li>
-					<div>Название проекта</div>
-					<input id="name_popup" type="text" class="bpopup_input" placeholder="Введите название">
-				</li>
-				<li>
-					<div>Картинка проекта</div>
-					<div class="bpopup_input input_file">Загрузите изображение<label class="ico_popup"><input type="file" class="hide_input"></label></div>
-				</li>
-				<li>
-					<div>URL проекта</div>
-					<input id="url" type="text" class="bpopup_input" placeholder="Добавьте ссылку">
-				</li>
-				<li>
-					<div>Описание</div>
-					<textarea id="description_popup" class="bpopup_input description_popup" placeholder="Пара слов о Вашем проекте"></textarea>
-				</li>
-				<button class="bt2 apopup__btn--send">Добавить</button>
-			</ul>
-		</div>
-	</div>
+	<script src="bower/qtip2/jquery.qtip.js" type="text/javascript"></script>	
+	<script src="js/validation.js" type="text/javascript"></script>	
+	<script src="js/main.js" type="text/javascript"></script>	
 </body>
 </html>
