@@ -136,7 +136,7 @@
 					</a>
 					<div class="bpopup_zg">Добавление проекта</div>
 					<div class="modal-body">						
-						<form id="add-new-project" role="form" class="form">		
+						<form enctype="multipart/form-data" id="add-new-project" role="form" class="form">		
 							<ul class="bpopup_ul">
 								<li>
 									<div class="server-mes error-mes"></div>
@@ -148,8 +148,8 @@
 								</li>
 								<li>
 									<div>Картинка проекта</div>
-									<input disabled='' placeholder="Загрузите изображение" id="fileupload-text" name="file_project-text" type="text" class="bpopup_input input_file" qtip-content="Вы не выбрали картинку" qtip-position="left"><label class="ico_popup"><input id="fileupload" name="files[]" type="file" class="hide_input">
-									<input id="fileurl" type="hidden" name="fileurl"></label>
+									<input readonly="" placeholder="Загрузите изображение" id="fileupload-text" name="file_project-text" type="text" class="bpopup_input input_file" qtip-content="Вы не выбрали картинку" qtip-position="left"><label class="ico_popup"><input id="fileupload" name="files[]" type="file" class="hide_input">
+									<input id="fileurl" type="hidden" name="MAX_FILE_SIZE" value="30000" name="fileurl"></label>
 								</li>
 								<li>
 									<div>URL проекта</div>

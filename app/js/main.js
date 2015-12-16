@@ -12,24 +12,22 @@ var myModule = (function () {
 		$('#add-new-project').on('submit', _addProject); // добавление проекта
 		$('#send_message_mail').on('submit', _sendMail); // добавление проекта
 		$('#fileupload').on('change', _changefileUpload);
-		$('#autoriz').on('submit', _sendMail); // добавление проекта
-	};
+		$('#autoriz').on('submit', _singUp); // добавление проекта
+	};	
 	var _sendMail = function (ev) {
-      console.log('отправка на почту');
+      console.log('почта');
       ev.preventDefault();// отмена стандартного действия элемента
       //переменные 
-      var form = $(this),
-           url = 'add-project.php',
-           myServerGiveAnAnswer = _ajaxForm(form, url);
+      var form = $(this);
+           validation.validateForm(form);
 
   };
-	var _sendMail = function (ev) {
+  var _singUp = function (ev) {
       console.log('авторизация');
       ev.preventDefault();// отмена стандартного действия элемента
       //переменные 
-      var form = $(this),
-           url = 'add-project.php',
-           myServerGiveAnAnswer = _ajaxForm(form, url);
+      var form = $(this);
+           validation.validateForm(form);
 
   };
 
@@ -44,9 +42,12 @@ var myModule = (function () {
                 speed: 650,
                 transition: 'slideDown',
                 onClose: function () {
+                  form.find('input, textarea').val('');
                   form.find('.server-mes').text('').hide();
                   console.log('стирание полей');
-                  form.find('input, textarea').val('');
+                  $('.qtip').remove(); 
+	     		  form.find('.has-error').removeClass('has-error'); 
+	     		  form.find('.error-mes, success-mes').text('').hide(); 
                 }
           });
   };
@@ -86,10 +87,12 @@ var myModule = (function () {
 
 	var _ajaxForm = function(form, url){    
 
-    	 if (!validation.validateForm(form)) return false;
+    	 
 
-	    var data = form.serialize();
+	    var data = form.serialize(),
+	    	form = $('#add-new-project');
 
+	    	validation.validateForm(form);
 	    // запрос на сервер
 	    return $.ajax({
 	        url: url,
