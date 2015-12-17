@@ -14,9 +14,9 @@ var validation = (function (){
 	      $.each(elements, function(index, val) {
 	        var element = $(val),
 	            val = element.val(),
-	            pos = element.attr('qtip-position');
-
-	        if(val.length === 0){
+	            pos = element.attr('qtip-position'),
+	            place = element.attr('placeholder');	      		
+	        if(val.length === 0 || val === place){
 	          element.addClass('has-error');
 	          _createQtip(element, pos);
 	          valid = false;
