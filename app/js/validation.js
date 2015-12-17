@@ -44,7 +44,7 @@ var validation = (function (){
 	      form.find('.error-mes, success-mes').text('').hide(); // очищаем и прячем сообщения с сервера
 	    },
 	    _createQtip = function (element, position) { // Создаёт тултипы
-	      console.log('Создаем тултип');
+	      // console.log('Создаем тултип');
 
 	      // позиция тултипа
 	      if (position === 'right') {
