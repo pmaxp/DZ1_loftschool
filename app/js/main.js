@@ -32,7 +32,7 @@ var myModule = (function () {
   };
 
 	var _showModal = function (ev) {
-      console.log('вызов окна добавление проекта');
+      // console.log('вызов окна добавление проекта');
       ev.preventDefault();// отмена стандартного действия элемента
 
       var divPopup = $('#add-project_pop_up'),
@@ -42,9 +42,8 @@ var myModule = (function () {
                 speed: 650,
                 transition: 'slideDown',
                 onClose: function () {
-                  form.find('input, textarea').val('');
                   form.find('.server-mes').text('').hide();
-                  console.log('стирание полей');
+                  // console.log('стирание полей');
                   $('.qtip').remove(); 
 	     		  form.find('.has-error').removeClass('has-error'); 
 	     		  form.find('.error-mes, success-mes').text('').hide(); 
@@ -64,7 +63,7 @@ var myModule = (function () {
 
 	  //Добавляем проект
   var _addProject = function (ev) {
-      console.log('добавление проекта');
+      // console.log('добавление проекта');
       ev.preventDefault();// отмена стандартного действия элемента
       //переменные
        var form = $(this),
@@ -83,6 +82,7 @@ var myModule = (function () {
         errorBox.text(ans.text).show();
       }
       })
+       validation.validateForm(form);
   };
 
 	var _ajaxForm = function(form, url){    
@@ -92,7 +92,7 @@ var myModule = (function () {
 	    var data = form.serialize(),
 	    	form = $('#add-new-project');
 
-	    	validation.validateForm(form);
+	    	
 	    // запрос на сервер
 	    return $.ajax({
 	        url: url,
@@ -100,10 +100,9 @@ var myModule = (function () {
 	        dataType: 'json',
 	        data: data,
 	    }).fail( function(ans){
-	       console.log('Ошибка в PHP');
+	       // console.log('Ошибка в PHP');
 	       form.find('.error-mes').text('На сервере произошла ошибка').show();
-	    });
-
+	    });   
 	     
 	  	};
 

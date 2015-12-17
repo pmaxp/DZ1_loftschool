@@ -2,11 +2,11 @@
 var validation = (function (){
 
 	var init = function(){
-				console.log('Инициализация модуля validation');
+				// console.log('Инициализация модуля validation');
 				_setUpListners();
 			},
 			validateForm = function (form) { // Проверяет, чтобы все поля формы были не пустыми. Если пустые - вызывает тултипы
-	     	console.log('Проверяем форму');
+	     	// console.log('Проверяем форму');
 
 	      var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
 	          valid = true;
@@ -28,15 +28,15 @@ var validation = (function (){
       },
 			_setUpListners = function () { // Прослушивает все события
 	      $('form').on('keydown', '.has-error', _removeError); // удаляем красную обводку у элементов форм
-	      $('form').on('reset', '.has-error', _clearForm); // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
+	      $('form').on('reset', _clearForm); // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
 	    },
     	_removeError = function() { // Убирает красную обводку у элементов форм
-	      console.log('Красная обводка у элементов форм удалена');
+	      // console.log('Красная обводка у элементов форм удалена');
 
 	      $(this).removeClass('has-error');
 	    },
 	    _clearForm = function(form) { // Очищает форму
-	      console.log('Очищаем форму');
+	      // console.log('Очищаем форму');
 
 	      var form = $(this);
 	      form.find('.input, .textarea').trigger('hideTooltip'); // удаляем тултипы
