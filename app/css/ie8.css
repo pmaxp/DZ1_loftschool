@@ -1,0 +1,12 @@
+.qtip-tip{
+	margin-top: -12px !important;
+	height: 30px !important;
+}
+.qtip-tip canvas{
+    width: 12px !important;
+    height: 30px !important;
+}
+
+.ico_popup:after{
+    height: 25px !important;    
+}

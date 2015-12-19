@@ -46,7 +46,6 @@ var myModule = (function () {
                     .find('input, textarea')
                     .not('input[type="file"], input[type="hidden"]')
                     .val('');
-                    form.find('input, textarea').click();
                   form
                     .find('.server-mes')
                     .text('')
