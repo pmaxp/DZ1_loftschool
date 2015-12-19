@@ -70,12 +70,12 @@
 				</nav>
 				<section class="info">
 					<article class="info_pole">
-						<h3 class="zaglv_portf">Мои работы</h3>
+						<h2 class="zaglv_portf">Мои работы</h2>
 						<ul class="portfolio">
 							<li class="works_elems">
 								<a href="#" class="works_elem">
 										<div class="hover_div">
-											<span href="#" class="name_hover tran_works">Название</span>
+											<span class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
 										<img class="works" src="images/web_01.jpg" alt="site.ru">	
@@ -86,7 +86,7 @@
 							<li class="works_elems">
 								<a href="#" class="works_elem">
 										<div class="hover_div">
-											<span href="#" class="name_hover tran_works">Название</span>
+											<span class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
 										<img class="works" src="images/web_01.jpg" alt="site.ru">	
@@ -97,7 +97,7 @@
 							<li class="works_elems">
 								<a href="#" class="works_elem">
 										<div class="hover_div">
-											<span href="#" class="name_hover tran_works">Название</span>
+											<span class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
 										<img class="works" src="images/web_01.jpg" alt="site.ru">	
@@ -108,7 +108,7 @@
 							<li class="works_elems">
 								<a href="#" class="works_elem">
 										<div class="hover_div">
-											<span href="#" class="name_hover tran_works">Название</span>
+											<span class="name_hover tran_works">Название</span>
 											<span class="helper"></span>
 										</div>
 										<img class="works" src="images/web_01.jpg" alt="site.ru">	
@@ -136,7 +136,7 @@
 					</a>
 					<div class="bpopup_zg">Добавление проекта</div>
 					<div class="modal-body">						
-						<form enctype="multipart/form-data" id="add-new-project" role="form" class="form">		
+						<form id="add-new-project" class="form">		
 							<ul class="bpopup_ul">
 								<li>
 									<div class="server-mes error-mes"></div>
@@ -144,12 +144,12 @@
 								</li>
 								<li>
 									<div>Название проекта</div>
-									<input name="projectName" type="text" id="name_popup" type="text" class="bpopup_input" placeholder="Введите название" qtip-content="Вы не ввели имя" qtip-position="left">
+									<input name="projectName" type="text" id="name_popup" class="bpopup_input" placeholder="Введите название" qtip-content="Вы не ввели имя" qtip-position="left">
 								</li>
 								<li>
 									<div>Картинка проекта</div>
-									<input disabled="" placeholder="Загрузите изображение" id="fileupload-text" name="file_project-text" type="text" class="bpopup_input input_file" qtip-content="Вы не выбрали картинку" qtip-position="left"><label class="ico_popup"><input id="fileupload" name="files" type="file" class="hide_input">
-									<input id="fileurl" type="hidden" name="MAX_FILE_SIZE" value="30000" name="fileurl"></label>
+									<input readonly="" placeholder="Загрузите изображение" id="fileupload-text" name="file_project-text" type="text" class="bpopup_input input_file" qtip-content="Вы не выбрали картинку" qtip-position="left"><label class="ico_popup"><input id="fileupload" name="files" type="file" class="hide_input_file">
+									</label>
 								</li>
 								<li>
 									<div>URL проекта</div>
@@ -157,9 +157,11 @@
 								</li>
 								<li>
 									<div>Описание</div>
-									<textarea name="description-progect" type="text" id="description_popup" class="bpopup_input description_popup" placeholder="Пара слов о Вашем проекте" qtip-content="Вы не ввели описание" qtip-position="left"></textarea>
+									<textarea name="description-progect" id="description_popup" class="bpopup_input description_popup" placeholder="Пара слов о Вашем проекте" qtip-content="Вы не ввели описание" qtip-position="left"></textarea>
 								</li>
-								<button type="submit" class="bt2 apopup__btn--send">Добавить</button>
+								<li>
+									<button type="submit" class="bt2 apopup__btn--send">Добавить</button>
+								</li>
 							</ul>
 						</form>	
 					</div>

@@ -10,12 +10,12 @@ var myModule = (function () {
 	var _setUpListners = function (){
 		$('#add-button-project').on('click', _showModal);// открыть модальное окно
 		$('#add-new-project').on('submit', _addProject); // добавление проекта
-		$('#send_message_mail').on('submit', _sendMail); // добавление проекта
-		$('#fileupload').on('change', _changefileUpload);
+		$('#send_message_mail').on('submit', _sendMail); // отправка формы на почту
+		$('#fileupload').on('change', _changefileUpload); // файл загружен
 		$('#autoriz').on('submit', _singUp); // добавление проекта
 	};	
 	var _sendMail = function (ev) {
-      console.log('почта');
+      // console.log('почта');
       ev.preventDefault();// отмена стандартного действия элемента
       //переменные 
       var form = $(this);
@@ -23,7 +23,7 @@ var myModule = (function () {
 
   };
   var _singUp = function (ev) {
-      console.log('авторизация');
+      // console.log('авторизация');
       ev.preventDefault();// отмена стандартного действия элемента
       //переменные 
       var form = $(this);
@@ -42,19 +42,34 @@ var myModule = (function () {
                 speed: 650,
                 transition: 'slideDown',
                 onClose: function () {
-                  form.find('.server-mes').text('').hide();
+                  form
+                    .find('input, textarea')
+                    .not('input[type="file"], input[type="hidden"]')
+                    .val('');
+                    form.find('input, textarea').click();
+                  form
+                    .find('.server-mes')
+                    .text('')
+                    .hide();
                   // console.log('стирание полей');
-                  $('.qtip').remove(); 
-	     		  form.find('.has-error').removeClass('has-error'); 
-	     		  form.find('.error-mes, success-mes').text('').hide(); 
+                  $('.qtip').remove();
+      	     		  form
+                    .find('.has-error')
+                    .removeClass('has-error'); 
+      	     		  form
+                  .find('.error-mes, success-mes')
+                  .text('')
+                  .hide();
                 }
           });
   };
 
 	// Изменили файл аплоад (добавили файл в файлаплоад)
 	var _changefileUpload = function (){
-		var input = $(this), // инпут type="file"
-				name = input[0].files[0].name; // имя загруженного файла
+		var inputfile = $(this), // инпут type="file"
+				name = inputfile.val(); // имя загруженного файла
+
+        // console.log(name);
 		$('#fileupload-text')
 			.val(name) // 
 			.trigger('hideTooltip')
@@ -64,14 +79,15 @@ var myModule = (function () {
 	  //Добавляем проект
   var _addProject = function (ev) {
       // console.log('добавление проекта');
-      ev.preventDefault();// отмена стандартного действия элемента
-      //переменные
-       var form = $(this),
+      ev.preventDefault();// отмена стандартного действия элемента      
+       var form = $(this),          
            url = 'add-project.php',
            myServerGiveAnAnswer = _ajaxForm(form, url);
+      
+       if (!validation.validateForm(form)) return false;
 
-       myServerGiveAnAnswer.done(function(ans) {
-
+      var answerServer = _ajaxForm(form, url);
+          answerServer.done(function (ans) {
         var successBox = form.find('.success-mes'),
             errorBox = form.find('.error-mes');
       if(ans.status === 'OK'){        
@@ -81,17 +97,13 @@ var myModule = (function () {
         successBox.hide();
         errorBox.text(ans.text).show();
       }
-      })
-       validation.validateForm(form);
+      });       
+       
   };
 
 	var _ajaxForm = function(form, url){    
 
-    	 
-
-	    var data = form.serialize(),
-	    	form = $('#add-new-project');
-
+	    var data = form.serialize();
 	    	
 	    // запрос на сервер
 	    return $.ajax({
@@ -99,7 +111,7 @@ var myModule = (function () {
 	        type: 'POST',
 	        dataType: 'json',
 	        data: data,
-	    }).fail( function(ans){
+	    }).fail(function(ans){
 	       // console.log('Ошибка в PHP');
 	       form.find('.error-mes').text('На сервере произошла ошибка').show();
 	    });   
